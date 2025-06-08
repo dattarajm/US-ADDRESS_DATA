@@ -11,12 +11,12 @@ st.markdown("View Points of Interest from Snowflake with Map, Filters, and Visua
 
 # Snowflake connection
 conn = snowflake.connector.connect(
-    user="dattarjm",
-    password="Saurabh@749869",
-    account="UAQAUNA-QC55709.snowflakecomputing.com",
-    warehouse="compute_wh",
-    database="US_ADDRESSES__POI_OWN",
-    schema="US_ADDRESSES__POI_OWN_SCHM"
+    user=st.secrets["snowflake"]["user"],
+    password=st.secrets["snowflake"]["password"],
+    account=st.secrets["snowflake"]["account"],
+    warehouse=st.secrets["snowflake"]["warehouse"],
+    database=st.secrets["snowflake"]["database"],
+    schema=st.secrets["snowflake"]["schema"]
 )
 
 # Fetch data
